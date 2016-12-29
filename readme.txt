@@ -8,11 +8,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Lists the last commented posts.
+Lists the last commented posts as a Wiget.
 
 == Description ==
 
-lists the last commented posts. You can configure how many posts should be displayed.
+Lists the last commented posts. You can configure how many posts should be displayed.
 
 == Installation ==
 
