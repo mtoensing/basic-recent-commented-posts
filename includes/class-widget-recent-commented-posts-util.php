@@ -9,9 +9,8 @@ class Recent_Commented_Posts_Util
 {
     public static function get_recent_commented_posts($args)
     {
-
-        $number = empty( $args['number'] ) ? false : filter_var( $args['number'], FILTER_VALIDATE_INT );
-        if ( !$number ) {
+        $number = empty($args['number']) ? false : filter_var($args['number'], FILTER_VALIDATE_INT);
+        if (!$number) {
             $number = 5;
         }
 
@@ -30,7 +29,6 @@ class Recent_Commented_Posts_Util
      */
     public static function query_posts_with_recent_comments($limit)
     {
-
         global $wpdb;
 
         $query = "select
@@ -70,7 +68,6 @@ class Recent_Commented_Posts_Util
         $html = '<ul id="lastcommented" >';
 
         foreach ($results as $result) {
-
             $html .= '<li class="lastcommented">';
 
             $comment = Recent_Commented_Posts_Util::get_first_approved_comment($result->ID);
@@ -84,12 +81,11 @@ class Recent_Commented_Posts_Util
                 $authorname = substr($authorname, 0, 18) . '...';
             }
 
-            $comment_user = '<a href="' . $comment_url . '"><span class="comment-author-link">' . $authorname . '</span> ' . __( 'on', 'recent-commented-posts' )  . ' ' . get_the_title($result->ID) . '</a>';
+            $comment_user = '<a href="' . $comment_url . '"><span class="comment-author-link">' .  get_the_title($result->ID) . '</span> — ' . $authorname . '</a>';
 
             $html .= $comment_user;
 
             $html .= '</li>';
-
         }
 
         $html .= '</ul>';
@@ -116,5 +112,4 @@ class Recent_Commented_Posts_Util
 
         return $comment;
     }
-
 }
