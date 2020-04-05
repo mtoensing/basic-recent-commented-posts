@@ -81,7 +81,7 @@ class Recent_Commented_Posts_Util
                 $authorname = substr($authorname, 0, 18) . '...';
             }
 
-            $comment_user = '<a href="' . $comment_url . '"><span class="comment-author-link">' .  get_the_title($result->ID) . '</span> — ' . $authorname . '</a>';
+            $comment_user = '<a href="' . $comment_url . '"><span class="dashicons dashicons-admin-comments" style="width: 1em;height: 1em; font-size: 1em; vertical-align: middle;"></span><span class="comment-author-link">' .  get_the_title($result->ID) . '</span><br>— ' . $authorname . '</a>';
 
             $html .= $comment_user;
 
