@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Basic Recent Commented Posts Widget\n"
-"POT-Creation-Date: 2016-12-29 00:08+0100\n"
-"PO-Revision-Date: 2016-12-29 00:12+0100\n"
+"POT-Creation-Date: 2017-01-04 16:50+0100\n"
+"PO-Revision-Date: 2017-01-04 16:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -20,18 +20,15 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/class-widget-recent-commented-posts-util.php:87
-msgid "on"
-msgstr "bei"
-
+#. Plugin Name of the plugin/theme
 #: includes/class-widget-recent-commented-posts.php:17
 #: includes/class-widget-recent-commented-posts.php:60
 msgid "Recent Commented Posts"
 msgstr "Kürzlich kommentierte Artikel"
 
 #: includes/class-widget-recent-commented-posts.php:20
-msgid "lists the last commented posts."
-msgstr "Zeigt eine Liste der zuletzt kommentierten Artikel an."
+msgid "list of the last commented posts."
+msgstr "Liste der zuletzt kommentierten Beiträge"
 
 #: includes/class-widget-recent-commented-posts.php:113
 msgid "Title:"
@@ -41,22 +38,30 @@ msgstr "Titel: "
 msgid "Number of posts to show:"
 msgstr "Anzahl der Artikel:"
 
-#. Plugin Name of the plugin/theme
-msgid "Basic Recent Commented Posts Widget"
-msgstr ""
-
 #. Plugin URI of the plugin/theme
 msgid "http://www.marc.tv/marctv-wordpress-plugins/"
-msgstr ""
+msgstr "http://www.marc.tv/marctv-wordpress-plugins/"
 
 #. Description of the plugin/theme
-msgid "Provides list of the last commented posts as a widget"
-msgstr ""
+msgid "Provides a widget with a list of the last commented posts."
+msgstr "Ein Widget mit einer Liste der zuletzt kommentierten Beiträge."
 
 #. Author of the plugin/theme
 msgid "Marc Toensing"
-msgstr ""
+msgstr "Marc Tönsing"
 
 #. Author URI of the plugin/theme
 msgid "http://www.marc.tv"
-msgstr ""
+msgstr "http://www.marc.tv"
+
+#~ msgid "on"
+#~ msgstr "bei"
+
+#~ msgid "Provides list of the last commented posts in a widget"
+#~ msgstr "Widget mit einer Liste der zuletzt kommentierten Beiträge"
+
+#~ msgid "Basic Recent Commented Posts Widget"
+#~ msgstr "Zuletzt kommentierte Beiträge Widget "
+
+#~ msgid "lists the last commented posts."
+#~ msgstr "Zeigt eine Liste der zuletzt kommentierten Artikel an."

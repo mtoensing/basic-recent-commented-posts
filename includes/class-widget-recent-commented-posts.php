@@ -17,7 +17,7 @@ class Widget_Recent_Commented_Posts extends WP_Widget {
 			__( 'Recent Commented Posts', 'recent-commented-posts' ),
 			array(
 				'classname'  => 'widget_recent_comments',
-				'description' => __( 'lists the last commented posts.', 'recent-commented-posts' )
+				'description' => __( 'list of the last commented posts.', 'recent-commented-posts' )
 			)
 		);
 

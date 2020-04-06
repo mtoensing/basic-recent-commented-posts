@@ -9,8 +9,9 @@ class Recent_Commented_Posts_Util
 {
     public static function get_recent_commented_posts($args)
     {
-        $number = empty($args['number']) ? false : filter_var($args['number'], FILTER_VALIDATE_INT);
-        if (!$number) {
+
+        $number = empty( $args['number'] ) ? false : filter_var( $args['number'], FILTER_VALIDATE_INT );
+        if ( !$number ) {
             $number = 5;
         }
 
@@ -29,30 +30,32 @@ class Recent_Commented_Posts_Util
      */
     public static function query_posts_with_recent_comments($limit)
     {
+
         global $wpdb;
 
         $query = "select
-               wp_posts.*,
-               coalesce((
-               select
-                  max(comment_date)
-               from
-                  $wpdb->comments wpc
-               where
-                  wpc.comment_post_id = wp_posts.id
-                  AND comment_type = 'comment'
-                  AND comment_approved = 1
-                  AND post_password = ''
-              ),
-               wp_posts.post_date  ) as mcomment_date
-            from
-               $wpdb->posts wp_posts
-            where
-               post_type = 'post'
-               and post_status = 'publish'
-               and comment_count > '0'
-            order by
-       mcomment_date desc  limit $limit";
+             wp_posts.*,
+             coalesce((
+             select
+                max(comment_date)
+             from
+                $wpdb->comments wpc
+             where
+                wpc.comment_post_id = wp_posts.id
+                AND comment_approved = 1
+                AND post_password = ''
+                AND comment_type NOT IN ( 'pingback' )
+                AND comment_type NOT IN ( 'trackback' )
+            ),
+             wp_posts.post_date  ) as mcomment_date
+          from
+             $wpdb->posts wp_posts
+          where
+             post_type = 'post'
+             and post_status = 'publish'
+             and comment_count > '0'
+          order by
+     mcomment_date desc  limit $limit";
 
         $query_result = $wpdb->get_results($query);
 
@@ -68,6 +71,7 @@ class Recent_Commented_Posts_Util
         $html = '<ul id="lastcommented" >';
 
         foreach ($results as $result) {
+
             $html .= '<li class="lastcommented">';
 
             $comment = Recent_Commented_Posts_Util::get_first_approved_comment($result->ID);
@@ -86,6 +90,7 @@ class Recent_Commented_Posts_Util
             $html .= $comment_user;
 
             $html .= '</li>';
+
         }
 
         $html .= '</ul>';
@@ -112,4 +117,5 @@ class Recent_Commented_Posts_Util
 
         return $comment;
     }
+
 }
