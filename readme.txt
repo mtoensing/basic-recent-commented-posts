@@ -4,11 +4,11 @@ Donate link: http://paypal.me/marctoensing
 Tags: comments, widget, posts
 Requires at least: 3.0.1
 Tested up to: 5.4
-Stable tag: 1.7
+Stable tag: 1.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Lists the last commented posts in a wiget.
+Lists the last commented posts in a widget.
 
 == Description ==
 
@@ -22,7 +22,10 @@ Lists the last commented posts. You can configure how many posts should be displ
 
 == Changelog ==
 
-= 1.6 =
+= 1.8 =
+Simpler style
+
+= 1.7 =
 Added Dashicons
 
 = 1.5 =
