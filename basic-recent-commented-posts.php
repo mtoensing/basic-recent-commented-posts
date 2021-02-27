@@ -1,12 +1,11 @@
 <?php
 /*
- *
 Plugin Name: Basic Recent Commented Posts Widget
 Plugin URI: http://www.marc.tv/marctv-wordpress-plugins/
 Description: Lists the last commented posts in a widget.
-Version: 1.9
-Author: Marc Toensing
-Author URI: http://www.marc.tv
+Version: 2.2
+Author: Marc Tönsing
+Author URI: https://marc.tv
 License: GPL2
 */
 

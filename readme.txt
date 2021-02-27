@@ -1,10 +1,10 @@
 === Basic Recent Commented Posts ===
-Contributors: MarcDK
+Contributors: Marc Tönsing
 Donate link: http://paypal.me/marctoensing
 Tags: comments, widget, posts
 Requires at least: 3.0.1
-Tested up to: 5.6.2 
-Stable tag: 1.9
+Tested up to: 5.6.2
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,10 +22,11 @@ Lists the last commented posts. You can configure how many posts should be displ
 
 == Changelog ==
 
-= 1.9 =
-Removed Dashicons
+= 2.2 = 
 
-= 1.8 =
+Removed Dashicon dependency.
+
+= 1.9 =
 Simpler style
 
 = 1.7 =
