@@ -3,8 +3,8 @@ Contributors: MarcDK
 Donate link: http://paypal.me/marctoensing
 Tags: comments, widget, posts
 Requires at least: 3.0.1
-Tested up to: 5.4
-Stable tag: 1.8
+Tested up to: 5.6.2 
+Stable tag: 1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,6 +21,9 @@ Lists the last commented posts. You can configure how many posts should be displ
 3. To add the widget, go to Appearance -> Widgets, and find the 'Better Recent Comments' widget in the list, then add to any widget area.
 
 == Changelog ==
+
+= 1.9 =
+Removed Dashicons
 
 = 1.8 =
 Simpler style

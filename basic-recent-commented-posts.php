@@ -4,7 +4,7 @@
 Plugin Name: Basic Recent Commented Posts Widget
 Plugin URI: http://www.marc.tv/marctv-wordpress-plugins/
 Description: Lists the last commented posts in a widget.
-Version: 1.8
+Version: 1.9
 Author: Marc Toensing
 Author URI: http://www.marc.tv
 License: GPL2
@@ -23,9 +23,6 @@ class Recent_Commented_Posts_Plugin {
 
     public function __construct() {
 
-				// Add Dashicons for comment icon in frontend
-				add_action( 'wp_enqueue_scripts', array($this, 'load_dashicons_front_end' ));
-
         // Load the text domain - should go on 'plugins_loaded' hook to make sure strings load prior to register_widget call
         add_action( 'plugins_loaded', array( $this, 'load_textdomain' ) );
 
@@ -33,10 +30,6 @@ class Recent_Commented_Posts_Plugin {
         add_action( 'widgets_init', array( $this, 'register_widget' ) );
 
     }
-
-		public function load_dashicons_front_end() {
-			wp_enqueue_style( 'dashicons' );
-		}
 
     public function load_textdomain() {
         load_plugin_textdomain( 'recent-commented-posts', false, dirname( plugin_basename( __FILE__  ) ) . '/languages' );
